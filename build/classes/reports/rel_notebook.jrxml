@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rel_notebook_geral" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="10e68705-6e1f-4dcb-91ef-f98911b64129">
+	<property name="ireport.zoom" value="1.3310000000000008"/>
+	<property name="ireport.x" value="87"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT n.id, n.modelo, m.descricao, n.serie, n.tipo FROM tb_notebook n, tb_marca m WHERE n.marca = m.id]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="modelo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="serie" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="52" uuid="7a8e8b68-6192-4fed-8a6e-35d5c4feb35d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="58304507-d6ba-4e42-9a4e-fa29f757d173"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Linguagem de Programação 3 | Prof° Afranio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="19" width="555" height="33" uuid="cb70ad14-0b0a-4165-9cdf-9a97aa09f1bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[>> Relatório de Notebooks <<]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="20" uuid="9242a487-52c3-4bbf-8177-b8ddc50f4033"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="311" y="2" width="110" height="20" uuid="b9b7ee24-1f09-47ac-a4e3-a4716cf2cacd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Série]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="2" width="144" height="20" uuid="1d0b389f-ca76-4030-b51e-952ed000eaa8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="2" width="116" height="20" uuid="2a20aaf0-44c5-4061-a723-8790a45f8689"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="2" width="135" height="20" uuid="30eeceaf-cb1f-4ee2-95df-9eff70bb06eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="2" width="54" height="20" uuid="8a91d1bf-2433-427f-8dd0-2c2df81b7fca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="20" uuid="91544494-cc62-4190-a27e-e91dd187ee87"/>
+			</rectangle>
+			<textField>
+				<reportElement x="311" y="2" width="111" height="20" uuid="d91d6688-ec17-4690-ac41-bc597976b3d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{serie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="2" width="116" height="20" uuid="6a9f5be8-3eab-4200-9e82-ffc9a7f7cb95"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="2" width="144" height="20" uuid="90095e8e-671e-4bb1-ab91-bfceedb62561"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{modelo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="2" width="54" height="20" uuid="2d457d87-3855-41ba-bd18-b9c526f1b7fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="2" width="134" height="20" uuid="cd0d6446-677b-45fa-b54f-a1649a5ce4d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="421" y="0" width="134" height="18" uuid="af791de2-4432-47e8-9d21-dac15954a465"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<text><![CDATA[Developed by Nathalia Cosim]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
